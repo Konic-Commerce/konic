@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "konic_backend": {
+      "candid": "src/konic_backend/konic_backend.did",
+      "package": "konic_backend",
+      "type": "rust"
+    },
+    "konic_frontend": {
+      "dependencies": [
+        "konic_backend"
+      ],
+      "source": [
+        "src/konic_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "konic_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
